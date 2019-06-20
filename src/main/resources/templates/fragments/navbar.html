@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<body>
+
+    <div th:fragment="reduced_navbar">
+        <nav class="black" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="/" class="brand-logo">AirControl</a>
+
+                <ul class="right hide-on-med-and-down" sec:authorize="isAuthenticated()">
+                    <li>
+                        <a class="dropdown-trigger" data-target="user_menu" style="color:lightseagreen">
+                            <span sec:authentication="name">login</span>
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down" sec:authorize="${!isAuthenticated()}">
+                    <li>
+                        <a href="/login" style="color:lightseagreen">Войти</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div th:fragment="extended_navbar">
+        <ul id="user_menu" class="dropdown-content">
+            <li>
+                <a href="/logout" style="color:lightseagreen">Выйти</a>
+            </li>
+        </ul>
+
+        <nav class="black" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="/" class="brand-logo">AirControl</a>
+                <ul class="right hide-on-med-and-down" sec:authorize="isAuthenticated()">
+                    <li><a href="/manual" style="color:lightseagreen">Инструкция использования</a></li>
+                    <li><a href="/history" style="color:lightseagreen">История Ваших анализов</a></li>
+                    <li>
+                        <a class="dropdown-trigger" data-target="user_menu" style="color:lightseagreen">
+                            <span sec:authentication="name">login</span>
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="right hide-on-med-and-down" sec:authorize="${!isAuthenticated()}">
+                    <li><a href="/manual" style="color:lightseagreen">Инструкция использования</a></li>
+                    <li>
+                        <a href="/login" style="color:lightseagreen">Войти</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+</body>
+</html>

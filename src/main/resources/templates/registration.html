@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Air Value</title>
+
+    <!-- CSS  -->
+    <link href="/webjars/materializecss/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+<div id="index-banner" class="parallax-container">
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo">AirControl</a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/login" style="color:lightseagreen">Вход</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form method="POST" th:action="@{/registration}" th:object="${registrationForm}">
+            <h2>Регистрация</h2>
+            <div class="row">
+                <div class="col s12 m4 l4 center-align">
+                    <div class="input-field">
+                        <input id="login_input" type="text" required="required" th:field="*{login}" autofocus="autofocus">
+                        <label for="login_input">Логин</label>
+                        <span class="helper-text" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></span>
+                    </div>
+                    <div class="input-field">
+                        <input id="password_input" type="password" required="required" th:field="*{password}">
+                        <label for="password_input">Пароль</label>
+                        <span class="helper-text" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                    </div>
+                    <div class="input-field">
+                        <input id="confirm_password_input" type="password" required="required" th:field="*{confirmPassword}">
+                        <label for="confirm_password_input">Введите пароль еще раз</label>
+                        <span class="helper-text" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></span>
+                    </div>
+                    <div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--  Scripts-->
+<script src="/webjars/jquery/2.1.1/dist/jquery.min.js"></script>
+<script src="/webjars/materializecss/1.0.0/js/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+
+</body>
+</html>

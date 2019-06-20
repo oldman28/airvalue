@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>История анализов</title>>
+        <html lang="en">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+            <title>Air Value</title>
+
+            <!-- CSS  -->
+            <link href="/webjars/materializecss/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+            <link href="/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        </head>
+
+<body>
+
+<div th:insert="fragments/navbar :: extended_navbar"></div>
+
+<div class="container">
+    <div class="section">
+        <i class="mdi-content-send lightseagreen-text">История Ваших анализов</i>
+    </div>
+    <div class="row">
+        <ul class="collection">
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">06.06.2019</span>
+                <p>Жилая комната</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">04.06.2019</span>
+                <p>Кухня</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">03.06.2019</span>
+                <p>Команата для отдыха и учебных занятий</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">03.06.2019</span>
+                <p>Офисное помещение</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">03.06.2019</span>
+                <p>Жилая комната</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">02.06.2019</span>
+                <p>Жилая комната</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">02.06.2019</span>
+                <p>Жилая комната</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">02.06.2019</span>
+                <p>Жилая комната</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">01.06.2019</span>
+                <p>Жилая комната</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+                <i class="material-icons circle green">insert_chart</i>
+                <span class="title">31.05.2019</span>
+                <p>Жилая комната</p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">О продукте</h5>
+                <p class="grey-text text-lighten-4">Разработано для бакалавской работы по заказу компании<a class="brown-text text-lighten-3" href="https://www.simbirsoft.com/" target="_blank"> ОАО "СимбирСофт"</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="http://vk.com/rivaldo28" target="_blank">Rival.H</a>
+        </div>
+    </div>
+</footer>
+
+<!--  Scripts-->
+<script src="/webjars/jquery/2.1.1/dist/jquery.min.js"></script>
+<script src="/webjars/materializecss/1.0.0/js/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+    var slider = document.getElementById('test-slider');
+    noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        step: 1,
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+            'min': 0,
+            'max': 100
+        },
+        format: wNumb({
+            decimals: 0
+        })
+    });
+    $(document).ready(function() {
+        $('input#input_text, textarea#textarea2').characterCounter();
+    });
+</script>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

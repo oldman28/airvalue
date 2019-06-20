@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Air Value</title>
+
+    <!-- CSS  -->
+    <link href="/webjars/materializecss/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+<div th:insert="fragments/navbar :: reduced_navbar"></div>
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">AirControl</h1>
+            <div class="row center">
+                <h5 class="header col s12 light white-text">Сделай свою жизнь приятнее и комфортнее!</h5>
+            </div>
+            <div class="row center">
+                <a href="/analyze" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">ПОПРОБОВАТЬ</a>
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+    <div class="parallax"><img src="/images/1233.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                    <h5 class="center">Ваше самочувствие и здоровье</h5>
+
+                    <p class="light">Нельзя пренебрегать состоянием микроклимата в Вашем помещение, ведь он напрямую влияет на состояние организма в целом, на его здоровье, самочувствие и работоспособность!</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                    <h5 class="center">Человек, его жизнь и дом</h5>
+                    <p class="light">В современном мире человек проводит большую часть дня именно в каких-либо помещениях, будь то либо собственная квартира, офис, тренажерный зал и ресторан. Именно поэтому очень важную роль в жизни играет то, какие будут созданы условия микроклимата в помещениях!</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                    <h5 class="center">Создавайте комфорт и работайте эффективнее</h5>
+
+                    <p class="light">Проведите анализ своего помещения вместе с нашим сервисом, сделай условия комфортнее и улучшения не заставят Вас долго ждать!</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light white-text">Подберите оборудование и почувствуйте благоприятные изменения в Вашем доме</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="/images/5.jpg" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>Наш алгоритм</h4>
+                <p class="left-align light">При анализе алгоритм опирается на нормативный документ ГОСТ 30494-2011. Здания жилые и общественные. Параметры микроклимата в помещениях, на основе которого производит вычисления отклонений Ваших показателей от показателей в данном документе, в результате рекомендации подбираются в большой точностью.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light white-text">Зарегистируйтесь и просматривайте Вашу историю достижения оптимальных условий в доме</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="/images/6.jpg" alt="Unsplashed background img 3"></div>
+</div>
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">О продукте</h5>
+                <p class="grey-text text-lighten-4">Разработано для бакалавской работы по заказу компании<a class="brown-text text-lighten-3" href="https://www.simbirsoft.com/" target="_blank"> ОАО "СимбирСофт"</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="http://vk.com/rivaldo28" target="_blank">Rival.H</a>
+        </div>
+    </div>
+</footer>
+
+<!--  Scripts-->
+<script src="/webjars/jquery/2.1.1/dist/jquery.min.js"></script>
+<script src="/webjars/materializecss/1.0.0/js/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Air Value</title>
+
+    <!-- CSS  -->
+    <link href="/webjars/materializecss/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+
+<div th:insert="fragments/navbar :: extended_navbar"></div>
+
+<div class="container">
+    <div class="section">
+        <i class="mdi-content-send lightseagreen-text">Результат анализа:</i>
+    </div>
+    <div class="row">
+        <p class="flow-text">Ваши данные:</p>
+        <p class="flow-text" th:text="Время года: ${analysis.inputParameters.season}"></p>
+        <p class="flow-text" th:text="Тип помещения: ${analysis.inputParameters.place}"></p>
+        <p class="flow-text" th:text="Площадь помещения: ${analysis.inputParameters.area}"></p>
+        <p class="flow-text" th:text="Высота помещения: ${analysis.inputParameters.height}"></p>
+        <p class="flow-text" th:text="Бюджет: ${analysis.inputParameters.budget}"></p>
+        <p class="flow-text" th:text="Температура: ${analysis.inputParameters.temperature}"></p>
+        <p class="flow-text" th:text="Влажность: ${analysis.inputParameters.wetness}"></p>
+        <div class="divider"></div>
+        <p class="flow-text" th:text="Результат: ${analysis.recommendationText}"></p>
+    </div>
+    <div class="row" sec:authorize="isAuthenticated()">
+        <div class="center-align">
+            <a class="waves-effect waves-light btn" href="/">Сохранить в PDF-документе</a>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 10px">
+        <div class="center-align">
+            <a class="waves-effect waves-light btn" href="/analyze">Анализировать еще раз</a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!--  Scripts-->
+<script src="/webjars/jquery/2.1.1/dist/jquery.min.js"></script>
+<script src="/webjars/materializecss/1.0.0/js/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+    var slider = document.getElementById('test-slider');
+    noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        step: 1,
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+            'min': 0,
+            'max': 100
+        },
+        format: wNumb({
+            decimals: 0
+        })
+    });
+    $(document).ready(function() {
+        $('input#input_text, textarea#textarea2').characterCounter();
+    });
+</script>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

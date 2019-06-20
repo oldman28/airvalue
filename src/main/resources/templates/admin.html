@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Air Value</title>
+
+    <!-- CSS  -->
+    <link href="/webjars/materializecss/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+
+<body>
+
+<nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo">AirControl</a>
+
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/login" style="color:lightseagreen">admin</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="section">
+        <i class="mdi-content-send lightseagreen-text">Оптимальные показатели на основе нормативного документа ГОСТ 30494-2011. Здания жилые и общественные. Параметры микроклимата в помещения. <br>
+        В случае поправок в параметрах микроклимата ГОСТа, требуется обновить данные в базе системы.</i>
+        <h6>Оптимальные показатели:</h6>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <select>
+                <option value="1">Холодный</option>
+                <option value="2">Теплный</option>
+            </select>
+            <label>Период года</label>
+        </div>
+
+        <div class="input-field col s12">
+            <select>
+                <option value="1">Жилая комната</option>
+                <option value="2">Кухня</option>
+                <option value="3">Комната для отдыха и учебных занятий</option>
+                <option value="4">Офисное помещение</option>
+            </select>
+            <label>Наименование помещения</label>
+        </div>
+
+        <form class="col s12">
+            <label>Оптимальная температура</label>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="temp_o_b" type="number" class="validate">
+                    <label for="temp_o_b">от</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="temp_o_e" type="number" class="validate">
+                    <label for="temp_o_e">до</label>
+                </div>
+            </div>
+
+            <label>Допустимая температура</label>
+            <div class="row">
+
+                <div class="input-field col s6">
+                    <input id="temp_d_b" type="number" class="validate">
+                    <label for="temp_d_b">от</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="temp_d_e" type="number" class="validate">
+                    <label for="temp_d_e">до</label>
+                </div>
+            </div>
+
+            <label>Оптимальная влажность</label>
+            <div class="row">
+
+                <div class="input-field col s6">
+                    <input id="vlazh_o_b" type="number" class="validate">
+                    <label for="vlazh_o_b">от</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="vlazh_o_e" type="number" class="validate">
+                    <label for="vlazh_o_e">до</label>
+                </div>
+            </div>
+
+            <label>Допустимая влажность</label>
+            <div class="row">
+
+                <div class="input-field col s6">
+                    <input id="vlazh_d_b" type="number" class="validate">
+                    <label for="vlazh_d_b">от</label>
+                </div>
+
+                <div class="input-field col s6">
+                    <input id="vlazh_d_e" type="number" class="validate">
+                    <label for="vlazh_d_e">до</label>
+                </div>
+            </div>
+
+            <div class="center-align">
+                <a class="waves-effect waves-light btn" href="/result">Обновить данные</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">О продукте</h5>
+                <p class="grey-text text-lighten-4">Разработано для бакалавской работы по заказу компании<a class="brown-text text-lighten-3" href="https://www.simbirsoft.com/" target="_blank"> ОАО "СимбирСофт"</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="http://vk.com/rivaldo28" target="_blank">Rival.H</a>
+        </div>
+    </div>
+</footer>
+
+<!--  Scripts-->
+<script src="/webjars/jquery/2.1.1/dist/jquery.min.js"></script>
+<script src="/webjars/materializecss/1.0.0/js/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+    var slider = document.getElementById('test-slider');
+    noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        step: 1,
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+            'min': 0,
+            'max': 100
+        },
+        format: wNumb({
+            decimals: 0
+        })
+    });
+    $(document).ready(function() {
+        $('input#input_text, textarea#textarea2').characterCounter();
+    });
+</script>
+</html>

@@ -1,0 +1,45 @@
+logging:
+  level.org.hibernate.type: trace
+
+server:
+  error.whitelabel.enabled: false
+  port: 8081
+
+spring:
+  profiles.active: h2
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        ddl-auto: update
+    generate-ddl: true
+
+---
+spring:
+  profiles: h2
+  h2.console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:database
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa.properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+
+---
+spring:
+  profiles: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/airdatabase
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 1111
+  jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+---
+spring:
+  profiles: heroku
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+    driverClassName: org.postgresql.Driver
+  jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect

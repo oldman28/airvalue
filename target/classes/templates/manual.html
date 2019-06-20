@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Air Value</title>
+
+    <!-- CSS  -->
+    <link href="/webjars/materializecss/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/styles/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+
+<body>
+
+<div th:insert="fragments/navbar :: extended_navbar"></div>
+
+<div class="container">
+    <div class="section">
+        <i class="mdi-content-send lightseagreen-text">Получите наши рекомендации на основе введеных Вами данных, но прежде ознакомтесь с иструкцией использования.</i>
+    </div>
+    <div class="section">
+        <i class="mdi-content-send lightseagreen-text" style="font-size: larger">Для получения корректных рекомендаций нужно ввести все необходимые параметры на странице анализатора. <br><br>
+            В холодный период года измерение показателей микроклимата следует выполнять при температуре наружного воздуха не выше минус 5 °С.
+            Не допускается проведение измерений при безоблачном небе в светлое время суток. <br><br>
+            Необходимо выбрать время года, а также тип помещения. <br><br>
+            В теплый период года измерение показателей микроклимата следует выполнять при температуре наружного воздуха не ниже 15 °С. Не допускается проведение измерений при безоблачном небе в светлое время суток.
+            Измерение температуры, влажности следует проводить в обслуживаемой зоне на высоте  0,1, 0,6 и 1,7 метров, найти средний показатель и ввести в необходимое поле.<br><br>
+
+        </i>
+    </div>
+</div>
+
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light white-text">Подберите оборудование и почувствуйте благоприятные изменения в Вашем доме</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="/images/5.jpg" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>Наш алгоритм</h4>
+                <p class="left-align light">При анализе алгоритм опирается на нормативный документ ГОСТ 30494-2011. Здания жилые и общественные. Параметры микроклимата в помещениях, на основе которого производит вычисления отклонений Ваших показателей от показателей в данном документе, в результате рекомендации подбираются в большой точностью.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light white-text">Зарегистируйтесь и просматривайте Вашу историю достижения оптимальных условий в доме</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="/images/6.jpg" alt="Unsplashed background img 3"></div>
+</div>
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">О продукте</h5>
+                <p class="grey-text text-lighten-4">Разработано для бакалавской работы по заказу компании<a class="brown-text text-lighten-3" href="https://www.simbirsoft.com/" target="_blank"> ОАО "СимбирСофт"</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="http://vk.com/rivaldo28" target="_blank">Rival.H</a>
+        </div>
+    </div>
+</footer>
+
+<!--  Scripts-->
+<script src="/webjars/jquery/2.1.1/dist/jquery.min.js"></script>
+<script src="/webjars/materializecss/1.0.0/js/materialize.min.js"></script>
+<script src="/scripts/init.js"></script>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+    var slider = document.getElementById('test-slider');
+    noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        step: 1,
+        orientation: 'horizontal', // 'horizontal' or 'vertical'
+        range: {
+            'min': 0,
+            'max': 100
+        },
+        format: wNumb({
+            decimals: 0
+        })
+    });
+    $(document).ready(function() {
+        $('input#input_text, textarea#textarea2').characterCounter();
+    });
+</script>
+</html>
